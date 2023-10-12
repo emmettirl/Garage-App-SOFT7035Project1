@@ -33,19 +33,19 @@
                 android:text="Choose An Option:" />
 
             <RadioButton
-                android:id="@+id/radioButtonCar"
+                android:id="@+id/radioCar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Car" />
 
             <RadioButton
-                android:id="@+id/radioButtonBike"
+                android:id="@+id/radioBike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bike" />
 
             <RadioButton
-                android:id="@+id/radioButtonOther"
+                android:id="@+id/radioOther"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Other" />
