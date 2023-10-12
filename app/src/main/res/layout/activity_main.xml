@@ -6,26 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.tabs.TabLayout
+
+    <LinearLayout
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_height="729dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cars" />
+        <TextView
+            android:id="@+id/textViewTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="Welcome to the Garage App" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bikes" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/others" />
-    </com.google.android.material.tabs.TabLayout>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose An Option:" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Car" />
+
+            <RadioButton
+                android:id="@+id/radioButtonBike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bike" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
