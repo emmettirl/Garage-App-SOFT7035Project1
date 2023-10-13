@@ -4,23 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/shade"
     tools:context=".MainActivity">
 
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:background="@color/primary"
+            app:srcCompat="@drawable/logo_1" />
 
         <TextView
             android:id="@+id/textViewTitle1"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:text="Welcome to the Garage App" />
+            android:text="Welcome to the Garage App"
+            android:textColor="@color/primary" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -30,7 +39,8 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Choose An Option:" />
+                android:text="Choose An Option:"
+                android:textColor="@color/primary" />
 
             <RadioButton
                 android:id="@+id/radioCar"
@@ -59,7 +69,11 @@
                 android:id="@+id/buttonStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary"
                 android:text="Start"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

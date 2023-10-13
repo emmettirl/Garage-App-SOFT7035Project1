@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary">#eebf04</color>
+    <color name="complementary">#0432ee</color>
+    <color name="analogous1">#ee4a04</color>
+    <color name="analogous2">#a8ee04</color>
+    <color name="triadic1">#32ee04</color>
+    <color name="triadic2">#04eebf</color>
+    <color name="shade">#3c3c3c</color>
 </resources>
