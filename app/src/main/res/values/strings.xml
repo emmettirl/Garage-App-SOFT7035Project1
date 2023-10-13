@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">SOFT7035 Project 1</string>
-    <string name="cars">Cars</string>
-    <string name="bikes">Bikes</string>
-    <string name="others">Others</string>
+    <string name="tab0">Cars</string>
+    <string name="tab1">Bikes</string>
+    <string name="tab2">Others</string>
     <string name="title_activity_recycler_view_vehicle_listing">Recycler_View_Vehicle_Listing
     </string>
     <!-- Strings used for fragments for navigation -->

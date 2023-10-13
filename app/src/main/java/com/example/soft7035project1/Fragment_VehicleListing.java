@@ -2,20 +2,17 @@ package com.example.soft7035project1;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Fragment_VehicleListing extends Fragment implements Fragment_VehicleListing_RV_Adapter.ItemClickListener {
@@ -41,17 +38,34 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
         animalNames.add("Rabbit");
 
 
+        assert getArguments() != null;
         int selectedTab = getArguments().getInt("selectedTab");
 
         TextView fragmentHeader = view.findViewById(R.id.fragmentHeading);
-        if (selectedTab==0){
-            //set this to change a variable for tabname, instead of hardcoding text
-            fragmentHeader.setText("Car");
-        } else if (selectedTab==1) {
-            fragmentHeader.setText("Bike");
-        } else {
-            fragmentHeader.setText("Other");
-        }
+        assert context != null;
+        String HeaderString = (
+                getResources().getString(
+                        (
+                                getResources().getIdentifier(
+                                        "tab"+selectedTab, "string", context.getPackageName()
+                                )
+                        )
+                ).replaceAll(".$","") + " Listings:"
+
+        );
+
+        fragmentHeader.setText(
+            HeaderString
+        );
+
+//        if (selectedTab==0){
+//            //set this to change a variable for tabname, instead of hardcoding text
+//            fragmentHeader.setText("Car");
+//        } else if (selectedTab==1) {
+//            fragmentHeader.setText("Bike");
+//        } else {
+//            fragmentHeader.setText("Other");
+//        }
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclerVehicleListing);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
