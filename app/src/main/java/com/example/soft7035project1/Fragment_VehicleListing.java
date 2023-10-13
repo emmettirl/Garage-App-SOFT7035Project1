@@ -58,14 +58,6 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
             HeaderString
         );
 
-//        if (selectedTab==0){
-//            //set this to change a variable for tabname, instead of hardcoding text
-//            fragmentHeader.setText("Car");
-//        } else if (selectedTab==1) {
-//            fragmentHeader.setText("Bike");
-//        } else {
-//            fragmentHeader.setText("Other");
-//        }
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclerVehicleListing);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));

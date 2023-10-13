@@ -43,7 +43,7 @@ public class Fragment_VehicleListing_RV_Adapter extends RecyclerView.Adapter<Fra
 
         ViewHolder(View itemview) {
             super(itemview);
-            RvRowTextView = itemview.findViewById(R.id.RvRowTextView);
+            RvRowTextView = itemview.findViewById(R.id.RvRowHeaderTextView);
             itemview.setOnClickListener(this);
         }
 
