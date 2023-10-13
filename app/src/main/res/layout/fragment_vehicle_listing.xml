@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/shade"
     tools:context=".Fragment_VehicleListing">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/fragmentHeading"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="hello cars"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
 </FrameLayout>

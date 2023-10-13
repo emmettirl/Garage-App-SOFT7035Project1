@@ -26,15 +26,14 @@ public class Activity_Main extends AppCompatActivity {
                 RadioButton radioBike = (RadioButton) findViewById(R.id.radioBike);
                 RadioButton radioOther = (RadioButton) findViewById(R.id.radioOther);
 
+
+
                 if(radioCar.isChecked()) {
-                    Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
-                    startActivity(intentStart);
+                    startIntent(0);
                 } else if(radioBike.isChecked()) {
-                    Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
-                    startActivity(intentStart);
+                    startIntent(1);
                 } else if(radioOther.isChecked()) {
-                    Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
-                    startActivity(intentStart);
+                    startIntent(2);
                 } else {
                     Context context = getApplicationContext();
                     CharSequence text = "Please Select an option, then click \"Start\".";
@@ -42,5 +41,11 @@ public class Activity_Main extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void startIntent(int selectedTab){
+        Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
+        intentStart.putExtra("selectedTab", selectedTab);
+        startActivity(intentStart);
     }
 }

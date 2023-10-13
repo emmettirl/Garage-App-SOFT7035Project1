@@ -28,14 +28,15 @@ public class Activity_VehicleListing extends AppCompatActivity {
         });
 
 
-//    temporary fragment creation for testing. In future create based on user selection
-    Fragment fragment = new Fragment_VehicleListing();
-
-    replaceFragment(fragment);
+        // set fragment based on user choice on landing page
+        int selectedTab = getIntent().getIntExtra("selectedTab",0);
+        Fragment fragment = Fragment_VehicleListing.newInstance(selectedTab);
+        replaceFragment(fragment);
 
     }
 
     private void replaceFragment(Fragment fragment) {
+        //method to replace the fragment on activity load or when new tab is selected
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
