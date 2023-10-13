@@ -10,15 +10,37 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 
 public class Activity_VehicleListing extends AppCompatActivity {
+
+    TabLayout tab;
+    FloatingActionButton fabBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_listing);
 
-        FloatingActionButton fabBack = findViewById(R.id.fabBack);
+        this.tab=findViewById(R.id.tabLayout);
+        tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                replaceFragment(Fragment_VehicleListing.newInstance(tab.getPosition()));
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                replaceFragment(Fragment_VehicleListing.newInstance(tab.getPosition()));
+            }
+        });
+
+        this.fabBack = findViewById(R.id.fabBack);
         fabBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
