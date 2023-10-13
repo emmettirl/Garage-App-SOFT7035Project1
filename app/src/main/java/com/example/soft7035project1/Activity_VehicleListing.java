@@ -52,8 +52,10 @@ public class Activity_VehicleListing extends AppCompatActivity {
 
         // set fragment based on user choice on landing page
         int selectedTab = getIntent().getIntExtra("selectedTab",0);
-        Fragment fragment = Fragment_VehicleListing.newInstance(selectedTab);
-        replaceFragment(fragment);
+        tab.getTabAt(selectedTab).select();
+
+//        Fragment fragment = Fragment_VehicleListing.newInstance(selectedTab);
+//        replaceFragment(fragment);
 
     }
 
