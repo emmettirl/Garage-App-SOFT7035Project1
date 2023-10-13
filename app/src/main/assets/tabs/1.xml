@@ -1,0 +1,102 @@
+<entries title="Bike" imgPrefix="b">
+    <entry id="0">
+        <name>Honda CBR500R</name>
+        <year>2023</year>
+        <price>6900</price>
+    </entry>
+    <entry id="1">
+        <name>Kawasaki Ninja 650</name>
+        <year>2022</year>
+        <price>7500</price>
+    </entry>
+    <entry id="2">
+        <name>Suzuki GSX-R750</name>
+        <year>2023</year>
+        <price>11900</price>
+    </entry>
+    <entry id="3">
+        <name>Yamaha YZF-R3</name>
+        <year>2022</year>
+        <price>5500</price>
+    </entry>
+    <entry id="4">
+        <name>BMW S1000RR</name>
+        <year>2023</year>
+        <price>16700</price>
+    </entry>
+    <entry id="5">
+        <name>Ducati Panigale V4</name>
+        <year>2022</year>
+        <price>22000</price>
+    </entry>
+    <entry id="6">
+        <name>Triumph Street Triple</name>
+        <year>2023</year>
+        <price>9900</price>
+    </entry>
+    <entry id="7">
+        <name>KTM 390 Duke</name>
+        <year>2022</year>
+        <price>5800</price>
+    </entry>
+    <entry id="8">
+        <name>Harley-Davidson Sportster</name>
+        <year>2023</year>
+        <price>9500</price>
+    </entry>
+    <entry id="9">
+        <name>Kawasaki Z900</name>
+        <year>2022</year>
+        <price>8500</price>
+    </entry>
+    <entry id="10">
+        <name>Suzuki SV650</name>
+        <year>2023</year>
+        <price>6700</price>
+    </entry>
+    <entry id="11">
+        <name>Yamaha MT-07</name>
+        <year>2022</year>
+        <price>7400</price>
+    </entry>
+    <entry id="12">
+        <name>Aprilia Tuono V4</name>
+        <year>2023</year>
+        <price>12500</price>
+    </entry>
+    <entry id="13">
+        <name>KTM 1290 Super Duke</name>
+        <year>2022</year>
+        <price>17000</price>
+    </entry>
+    <entry id="14">
+        <name>Harley-Davidson Fat Bob</name>
+        <year>2023</year>
+        <price>15500</price>
+    </entry>
+    <entry id="15">
+        <name>Ducati Monster 821</name>
+        <year>2022</year>
+        <price>11900</price>
+    </entry>
+    <entry id="16">
+        <name>Triumph Bonneville T100</name>
+        <year>2023</year>
+        <price>10400</price>
+    </entry>
+    <entry id="17">
+        <name>BMW R 1250 GS</name>
+        <year>2022</year>
+        <price>19700</price>
+    </entry>
+    <entry id="18">
+        <name>MV Agusta Brutale 800</name>
+        <year>2023</year>
+        <price>15200</price>
+    </entry>
+    <entry id="19">
+        <name>Indian Scout</name>
+        <year>2022</year>
+        <price>12600</price>
+    </entry>
+</entries>

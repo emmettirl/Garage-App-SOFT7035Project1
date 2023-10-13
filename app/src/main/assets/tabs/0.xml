@@ -1,0 +1,103 @@
+
+<entries title="Car" imgPrefix="c">
+    <entry id="0">
+        <name>Toyota Corolla</name>
+        <year>2023</year>
+        <price>25000</price>
+    </entry>
+    <entry id="1">
+        <name>Honda Civic</name>
+        <year>2022</year>
+        <price>23000</price>
+    </entry>
+    <entry id="2">
+        <name>Ford Mustang</name>
+        <year>2023</year>
+        <price>45000</price>
+    </entry>
+    <entry id="3">
+        <name>Chevrolet Silverado</name>
+        <year>2022</year>
+        <price>35000</price>
+    </entry>
+    <entry id="4">
+        <name>Volkswagen Golf</name>
+        <year>2023</year>
+        <price>27000</price>
+    </entry>
+    <entry id="5">
+        <name>BMW 3 Series</name>
+        <year>2022</year>
+        <price>42000</price>
+    </entry>
+    <entry id="6">
+        <name>Mercedes-Benz C-Class</name>
+        <year>2023</year>
+        <price>46000</price>
+    </entry>
+    <entry id="7">
+        <name>Audi Q5</name>
+        <year>2022</year>
+        <price>48000</price>
+    </entry>
+    <entry id="8">
+        <name>Nissan Altima</name>
+        <year>2023</year>
+        <price>26000</price>
+    </entry>
+    <entry id="9">
+        <name>Hyundai Sonata</name>
+        <year>2022</year>
+        <price>23000</price>
+    </entry>
+    <entry id="10">
+        <name>Kia Sportage</name>
+        <year>2023</year>
+        <price>28000</price>
+    </entry>
+    <entry id="11">
+        <name>Subaru Outback</name>
+        <year>2022</year>
+        <price>27000</price>
+    </entry>
+    <entry id="12">
+        <name>Jeep Wrangler</name>
+        <year>2023</year>
+        <price>37000</price>
+    </entry>
+    <entry id="13">
+        <name>Tesla Model 3</name>
+        <year>2022</year>
+        <price>50000</price>
+    </entry>
+    <entry id="14">
+        <name>Lexus RX</name>
+        <year>2023</year>
+        <price>46000</price>
+    </entry>
+    <entry id="15">
+        <name>Mazda CX-5</name>
+        <year>2022</year>
+        <price>29000</price>
+    </entry>
+    <entry id="16">
+        <name>Volvo XC60</name>
+        <year>2023</year>
+        <price>48000</price>
+    </entry>
+    <entry id="17">
+        <name>Porsche 911</name>
+        <year>2022</year>
+        <price>100000</price>
+    </entry>
+    <entry id="18">
+        <name>Ford Escape</name>
+        <year>2023</year>
+        <price>28000</price>
+    </entry>
+    <entry id="19">
+        <name>Chevrolet Equinox</name>
+        <year>2022</year>
+        <price>29000</price>
+    </entry>
+</entries>
