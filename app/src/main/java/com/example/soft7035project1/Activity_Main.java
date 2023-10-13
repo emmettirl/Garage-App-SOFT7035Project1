@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity_Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
                 RadioButton radioOther = (RadioButton) findViewById(R.id.radioOther);
 
                 if(radioCar.isChecked()) {
-                    Intent intentStart = new Intent(MainActivity.this, Recycler_View_Vehicle_Listing.class);
+                    Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
                     startActivity(intentStart);
                 } else if(radioBike.isChecked()) {
-                    Intent intentStart = new Intent(MainActivity.this, Recycler_View_Vehicle_Listing.class);
+                    Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
                     startActivity(intentStart);
                 } else if(radioOther.isChecked()) {
-                    Intent intentStart = new Intent(MainActivity.this, Recycler_View_Vehicle_Listing.class);
+                    Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
                     startActivity(intentStart);
                 } else {
                     Context context = getApplicationContext();

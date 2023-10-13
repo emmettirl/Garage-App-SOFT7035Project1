@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Recycler_View_Vehicle_Listing">
+    tools:context=".Activity_VehicleListing">
 
     <View
         android:id="@+id/rectangle_at_the_top"
@@ -26,11 +26,7 @@
         app:layout_constraintStart_toStartOf="@+id/rectangle_at_the_top"
         app:layout_constraintTop_toTopOf="@+id/rectangle_at_the_top" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="681dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_at_the_top" />
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -65,5 +61,15 @@
         app:layout_constraintTop_toBottomOf="@+id/rectangle_at_the_top"
         app:srcCompat="?attr/homeAsUpIndicator"
         android:contentDescription="Go back to the homepage" />
+
+    <FrameLayout
+        android:id="@+id/fragmentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_at_the_top">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
