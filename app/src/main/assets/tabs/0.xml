@@ -1,103 +1,104 @@
-
-<entries title="Car" imgPrefix="c">
+<feed>
+    <entries>
     <entry id="0">
-        <name>Toyota Corolla</name>
+        <model>Toyota Corolla</model>
         <year>2023</year>
         <price>25000</price>
     </entry>
     <entry id="1">
-        <name>Honda Civic</name>
+        <model>Honda Civic</model>
         <year>2022</year>
         <price>23000</price>
     </entry>
     <entry id="2">
-        <name>Ford Mustang</name>
+        <model>Ford Mustang</model>
         <year>2023</year>
         <price>45000</price>
     </entry>
     <entry id="3">
-        <name>Chevrolet Silverado</name>
+        <model>Chevrolet Silverado</model>
         <year>2022</year>
         <price>35000</price>
     </entry>
     <entry id="4">
-        <name>Volkswagen Golf</name>
+        <model>Volkswagen Golf</model>
         <year>2023</year>
         <price>27000</price>
     </entry>
     <entry id="5">
-        <name>BMW 3 Series</name>
+        <model>BMW 3 Series</model>
         <year>2022</year>
         <price>42000</price>
     </entry>
     <entry id="6">
-        <name>Mercedes-Benz C-Class</name>
+        <model>Mercedes-Benz C-Class</model>
         <year>2023</year>
         <price>46000</price>
     </entry>
     <entry id="7">
-        <name>Audi Q5</name>
+        <model>Audi Q5</model>
         <year>2022</year>
         <price>48000</price>
     </entry>
     <entry id="8">
-        <name>Nissan Altima</name>
+        <model>Nissan Altima</model>
         <year>2023</year>
         <price>26000</price>
     </entry>
     <entry id="9">
-        <name>Hyundai Sonata</name>
+        <model>Hyundai Sonata</model>
         <year>2022</year>
         <price>23000</price>
     </entry>
     <entry id="10">
-        <name>Kia Sportage</name>
+        <model>Kia Sportage</model>
         <year>2023</year>
         <price>28000</price>
     </entry>
     <entry id="11">
-        <name>Subaru Outback</name>
+        <model>Subaru Outback</model>
         <year>2022</year>
         <price>27000</price>
     </entry>
     <entry id="12">
-        <name>Jeep Wrangler</name>
+        <model>Jeep Wrangler</model>
         <year>2023</year>
         <price>37000</price>
     </entry>
     <entry id="13">
-        <name>Tesla Model 3</name>
+        <model>Tesla Model 3</model>
         <year>2022</year>
         <price>50000</price>
     </entry>
     <entry id="14">
-        <name>Lexus RX</name>
+        <model>Lexus RX</model>
         <year>2023</year>
         <price>46000</price>
     </entry>
     <entry id="15">
-        <name>Mazda CX-5</name>
+        <model>Mazda CX-5</model>
         <year>2022</year>
         <price>29000</price>
     </entry>
     <entry id="16">
-        <name>Volvo XC60</name>
+        <model>Volvo XC60</model>
         <year>2023</year>
         <price>48000</price>
     </entry>
     <entry id="17">
-        <name>Porsche 911</name>
+        <model>Porsche 911</model>
         <year>2022</year>
         <price>100000</price>
     </entry>
     <entry id="18">
-        <name>Ford Escape</name>
+        <model>Ford Escape</model>
         <year>2023</year>
         <price>28000</price>
     </entry>
     <entry id="19">
-        <name>Chevrolet Equinox</name>
+        <model>Chevrolet Equinox</model>
         <year>2022</year>
         <price>29000</price>
     </entry>
 </entries>
+</feed>

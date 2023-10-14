@@ -1,101 +1,101 @@
 <entries title="Bike" imgPrefix="b">
     <entry id="0">
-        <name>Honda CBR500R</name>
+        <model>Honda CBR500R</model>
         <year>2023</year>
         <price>6900</price>
     </entry>
     <entry id="1">
-        <name>Kawasaki Ninja 650</name>
+        <model>Kawasaki Ninja 650</model>
         <year>2022</year>
         <price>7500</price>
     </entry>
     <entry id="2">
-        <name>Suzuki GSX-R750</name>
+        <model>Suzuki GSX-R750</model>
         <year>2023</year>
         <price>11900</price>
     </entry>
     <entry id="3">
-        <name>Yamaha YZF-R3</name>
+        <model>Yamaha YZF-R3</model>
         <year>2022</year>
         <price>5500</price>
     </entry>
     <entry id="4">
-        <name>BMW S1000RR</name>
+        <model>BMW S1000RR</model>
         <year>2023</year>
         <price>16700</price>
     </entry>
     <entry id="5">
-        <name>Ducati Panigale V4</name>
+        <model>Ducati Panigale V4</model>
         <year>2022</year>
         <price>22000</price>
     </entry>
     <entry id="6">
-        <name>Triumph Street Triple</name>
+        <model>Triumph Street Triple</model>
         <year>2023</year>
         <price>9900</price>
     </entry>
     <entry id="7">
-        <name>KTM 390 Duke</name>
+        <model>KTM 390 Duke</model>
         <year>2022</year>
         <price>5800</price>
     </entry>
     <entry id="8">
-        <name>Harley-Davidson Sportster</name>
+        <model>Harley-Davidson Sportster</model>
         <year>2023</year>
         <price>9500</price>
     </entry>
     <entry id="9">
-        <name>Kawasaki Z900</name>
+        <model>Kawasaki Z900</model>
         <year>2022</year>
         <price>8500</price>
     </entry>
     <entry id="10">
-        <name>Suzuki SV650</name>
+        <model>Suzuki SV650</model>
         <year>2023</year>
         <price>6700</price>
     </entry>
     <entry id="11">
-        <name>Yamaha MT-07</name>
+        <model>Yamaha MT-07</model>
         <year>2022</year>
         <price>7400</price>
     </entry>
     <entry id="12">
-        <name>Aprilia Tuono V4</name>
+        <model>Aprilia Tuono V4</model>
         <year>2023</year>
         <price>12500</price>
     </entry>
     <entry id="13">
-        <name>KTM 1290 Super Duke</name>
+        <model>KTM 1290 Super Duke</model>
         <year>2022</year>
         <price>17000</price>
     </entry>
     <entry id="14">
-        <name>Harley-Davidson Fat Bob</name>
+        <model>Harley-Davidson Fat Bob</model>
         <year>2023</year>
         <price>15500</price>
     </entry>
     <entry id="15">
-        <name>Ducati Monster 821</name>
+        <model>Ducati Monster 821</model>
         <year>2022</year>
         <price>11900</price>
     </entry>
     <entry id="16">
-        <name>Triumph Bonneville T100</name>
+        <model>Triumph Bonneville T100</model>
         <year>2023</year>
         <price>10400</price>
     </entry>
     <entry id="17">
-        <name>BMW R 1250 GS</name>
+        <model>BMW R 1250 GS</model>
         <year>2022</year>
         <price>19700</price>
     </entry>
     <entry id="18">
-        <name>MV Agusta Brutale 800</name>
+        <model>MV Agusta Brutale 800</model>
         <year>2023</year>
         <price>15200</price>
     </entry>
     <entry id="19">
-        <name>Indian Scout</name>
+        <model>Indian Scout</model>
         <year>2022</year>
         <price>12600</price>
     </entry>

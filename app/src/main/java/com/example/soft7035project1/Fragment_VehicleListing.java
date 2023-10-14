@@ -2,6 +2,7 @@ package com.example.soft7035project1;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Fragment_VehicleListing extends Fragment implements Fragment_VehicleListing_RV_Adapter.ItemClickListener {
@@ -26,20 +31,38 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
         View view = inflater.inflate(R.layout.fragment_vehicle_listing, container, false);
         Context context = getActivity();
 
+        int selectedTab = getArguments().getInt("selectedTab");
+        String selectedTabXmlFilePath = "tabs/" + Integer.toString(selectedTab) + ".xml";
+        Log.d("myDebug", selectedTabXmlFilePath);
 
-        ArrayList<String> animalNames=new ArrayList<>();
-        this.adapter = new Fragment_VehicleListing_RV_Adapter(this, animalNames);
+        XmlParser xmlParser = new XmlParser();
 
 
+        ArrayList<String> modelNames=new ArrayList<>();
+        this.adapter = new Fragment_VehicleListing_RV_Adapter(this, modelNames);
 
-        animalNames.add("Horse");
-        animalNames.add("Sheep");
-        animalNames.add("Goat");
-        animalNames.add("Rabbit");
+
+        try {
+            List<XmlParser.Entry> entryList = xmlParser.parseFile(selectedTabXmlFilePath, context);
+
+            for (XmlParser.Entry entry: entryList) {
+                modelNames.add(entry.model);
+            }
+
+        } catch (XmlPullParserException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+//        carModels.add("Horse");
+//        carModels.add("Sheep");
+//        carModels.add("Goat");
+//        carModels.add("Rabbit");
 
 
         assert getArguments() != null;
-        int selectedTab = getArguments().getInt("selectedTab");
 
         TextView fragmentHeader = view.findViewById(R.id.fragmentHeading);
         assert context != null;

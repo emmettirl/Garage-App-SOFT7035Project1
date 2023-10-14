@@ -1,101 +1,101 @@
 <entries title="Other" imgPrefix="o">
     <entry id="0">
-        <name>John Deere 5075E</name>
+        <model>John Deere 5075E</model>
         <year>2023</year>
         <price>35000</price>
     </entry>
     <entry id="1">
-        <name>Massey Ferguson 4707</name>
+        <model>Massey Ferguson 4707</model>
         <year>2022</year>
         <price>29000</price>
     </entry>
     <entry id="2">
-        <name>New Holland T6.175</name>
+        <model>New Holland T6.175</model>
         <year>2023</year>
         <price>41000</price>
     </entry>
     <entry id="3">
-        <name>Kubota M5-111</name>
+        <model>Kubota M5-111</model>
         <year>2022</year>
         <price>32000</price>
     </entry>
     <entry id="4">
-        <name>Caterpillar Challenger 55</name>
+        <model>Caterpillar Challenger 55</model>
         <year>2023</year>
         <price>68000</price>
     </entry>
     <entry id="5">
-        <name>Case IH Puma 200</name>
+        <model>Case IH Puma 200</model>
         <year>2022</year>
         <price>44000</price>
     </entry>
     <entry id="6">
-        <name>Mahindra 5555 4WD</name>
+        <model>Mahindra 5555 4WD</model>
         <year>2023</year>
         <price>27000</price>
     </entry>
     <entry id="7">
-        <name>Fendt Vario 716</name>
+        <model>Fendt Vario 716</model>
         <year>2022</year>
         <price>54000</price>
     </entry>
     <entry id="8">
-        <name>Valtra N104 HiTech</name>
+        <model>Valtra N104 HiTech</model>
         <year>2023</year>
         <price>38000</price>
     </entry>
     <entry id="9">
-        <name>Deutz-Fahr 6185 TTV</name>
+        <model>Deutz-Fahr 6185 TTV</model>
         <year>2022</year>
         <price>47000</price>
     </entry>
     <entry id="10">
-        <name>Agco Allis 9815</name>
+        <model>Agco Allis 9815</model>
         <year>2023</year>
         <price>29000</price>
     </entry>
     <entry id="11">
-        <name>LS Tractor XR4155</name>
+        <model>LS Tractor XR4155</model>
         <year>2022</year>
         <price>33000</price>
     </entry>
     <entry id="12">
-        <name>Zetor Crystal 160</name>
+        <model>Zetor Crystal 160</model>
         <year>2023</year>
         <price>29000</price>
     </entry>
     <entry id="13">
-        <name>KIOTI DK6010SE</name>
+        <model>KIOTI DK6010SE</model>
         <year>2022</year>
         <price>25000</price>
     </entry>
     <entry id="14">
-        <name>Branson 3520h</name>
+        <model>Branson 3520h</model>
         <year>2023</year>
         <price>26000</price>
     </entry>
     <entry id="15">
-        <name>Yanmar SA424</name>
+        <model>Yanmar SA424</model>
         <year>2022</year>
         <price>23000</price>
     </entry>
     <entry id="16">
-        <name>McCormick X1.55</name>
+        <model>McCormick X1.55</model>
         <year>2023</year>
         <price>27000</price>
     </entry>
     <entry id="17">
-        <name>Belarus 311</name>
+        <model>Belarus 311</model>
         <year>2022</year>
         <price>28000</price>
     </entry>
     <entry id="18">
-        <name>Kioti DK10SE HST</name>
+        <model>Kioti DK10SE HST</model>
         <year>2023</year>
         <price>22000</price>
     </entry>
     <entry id="19">
-        <name>Cub Cadet 7500</name>
+        <model>Cub Cadet 7500</model>
         <year>2022</year>
         <price>18000</price>
     </entry>
