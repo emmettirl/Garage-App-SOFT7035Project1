@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,7 +33,7 @@ public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Ad
         this.context = getActivity();
 
         int selectedTab = getArguments().getInt("selectedTab");
-        String selectedTabXmlFilePath = "tabs/" + Integer.toString(selectedTab) + ".xml";
+        String selectedTabXmlFilePath = "tabs/" + selectedTab + ".xml";
         Log.d("myDebug", selectedTabXmlFilePath);
 
         XmlParser xmlParser = new XmlParser();
@@ -94,7 +93,7 @@ public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Ad
     }
 
     public void onItemClick(View view, int position){
-        Toast.makeText(getActivity(), "You clicked "+ adapter.getModel(position) +" on row number " + position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "You clicked "+ adapter.getModel(position) +" on row number " + position, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), Activity_Listing_Details.class);
         intent.putExtra("model", adapter.getModel(position));
         intent.putExtra("year", adapter.getYear(position));

@@ -2,12 +2,15 @@ package com.example.soft7035project1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -43,7 +46,7 @@ public class Activity_Listing_Details extends AppCompatActivity {
 
         ImageView imageViewPhoto = findViewById(R.id.imageViewCard) ;
 
-        InputStream ims = null;
+        InputStream ims;
         try {
             ims = getAssets().open(imageFilePath);
             Drawable d = Drawable.createFromStream(ims, null);
@@ -75,8 +78,24 @@ public class Activity_Listing_Details extends AppCompatActivity {
     });
 
         this.fabWebsite = findViewById(R.id.fabWebsiteCardView);
+        fabWebsite.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                showWebPage();
+            }
 
+            public void showWebPage() {
+                Uri uri = Uri.parse("https://www.donedeal.ie/cars?words=" + contextModel.replaceAll(
+                        "[^a-zA-Z0-9 ]", ""));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(Activity_Listing_Details.this, e.toString(), Toast.LENGTH_SHORT).show();
+                }
 
+            }
+        });
 
     }
 
