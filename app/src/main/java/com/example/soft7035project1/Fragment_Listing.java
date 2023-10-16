@@ -1,6 +1,7 @@
 package com.example.soft7035project1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,13 +24,14 @@ import java.util.List;
 public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Adapter.ItemClickListener {
 
     Fragment_Listing_RV_Adapter adapter;
+    Context context;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_listing, container, false);
-        Context context = getActivity();
+        this.context = getActivity();
 
         int selectedTab = getArguments().getInt("selectedTab");
         String selectedTabXmlFilePath = "tabs/" + Integer.toString(selectedTab) + ".xml";
@@ -92,7 +94,17 @@ public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Ad
     }
 
     public void onItemClick(View view, int position){
-        Toast.makeText(getActivity(), "You clicked "+ adapter.getItem(position) +" on row number " + position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "You clicked "+ adapter.getModel(position) +" on row number " + position, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), Activity_Listing_Details.class);
+        intent.putExtra("model", adapter.getModel(position));
+        intent.putExtra("year", adapter.getYear(position));
+        intent.putExtra("price", adapter.getPrice(position));
+
+        String imageFilePath = ("images/" + adapter.getPrefix() + position+".jpeg");
+        intent.putExtra("imageFilePath", imageFilePath);
+
+        startActivity(intent);
+
     }
 
     public static Fragment_Listing newInstance(int selectedTab) {

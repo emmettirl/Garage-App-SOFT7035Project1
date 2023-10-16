@@ -99,9 +99,20 @@ public class Fragment_Listing_RV_Adapter extends RecyclerView.Adapter<Fragment_L
 
 
     }
-    String getItem(int id) {
+    String getModel(int id) {
         return modelData.get(id);
     }
+    String getYear(int id) {
+        return yearData.get(id);
+    }
+    String getPrice(int id) {
+        return priceData.get(id);
+    }
+    String getPrefix() {
+        return xmlImagePrefix;
+    }
+
+
 
     void setClickListener(ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;

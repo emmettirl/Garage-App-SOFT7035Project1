@@ -6,6 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Listing_Details">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabWebsiteCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="To Website Button"
+        android:src="?android:attr/listChoiceIndicatorSingle"
+        app:backgroundTint="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fabHomeCardView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHomeCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:contentDescription="Home Button"
+        android:src="?android:attr/listChoiceIndicatorSingle"
+        app:backgroundTint="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fabWebsiteCardView"
+        app:layout_constraintEnd_toStartOf="@id/fabBackCardView"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBackCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:contentDescription="Back Button"
+        android:src="?attr/homeAsUpIndicator"
+        app:backgroundTint="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fabHomeCardView"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <View
         android:id="@+id/rectangle_at_the_top2"
         android:layout_width="match_parent"
@@ -27,6 +65,7 @@
         app:layout_constraintTop_toTopOf="@+id/rectangle_at_the_top2" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:backgroundTint="@color/shade"
@@ -41,85 +80,33 @@
             <LinearLayout
                 android:id="@+id/linearLayout_cardContent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:orientation="vertical"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageViewCard"
                     android:layout_width="match_parent"
                     android:layout_height="213dp"
                     android:src="@android:drawable/ic_menu_report_image" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textviewCardModel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textviewCardPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textviewCardYear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                app
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="linearLayout_cardContent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/floatingActionButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:src="?android:attr/listChoiceIndicatorSingle"
-                        app:backgroundTint="@color/primary"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/floatingActionButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:src="?android:attr/listChoiceIndicatorSingle"
-                        app:backgroundTint="@color/primary"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3"
-                        app:layout_constraintStart_toEndOf="@+id/floatingActionButton" />
-
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/floatingActionButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:src="?attr/homeAsUpIndicator"
-                        app:backgroundTint="@color/primary"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/floatingActionButton2" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
