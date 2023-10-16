@@ -1,5 +1,4 @@
-<feed>
-    <entries>
+<entries title="Car" imgPrefix="c">
     <entry id="0">
         <model>Toyota Corolla</model>
         <year>2023</year>
@@ -101,4 +100,3 @@
         <price>29000</price>
     </entry>
 </entries>
-</feed>

@@ -38,15 +38,21 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
         XmlParser xmlParser = new XmlParser();
 
 
-        ArrayList<String> modelNames=new ArrayList<>();
-        this.adapter = new Fragment_VehicleListing_RV_Adapter(this, modelNames);
+        ArrayList<String> listingModel=new ArrayList<>();
+        ArrayList<String> listingPrice=new ArrayList<>();
+        ArrayList<String> listingYear=new ArrayList<>();
+
+        this.adapter = new Fragment_VehicleListing_RV_Adapter(this, listingModel, listingPrice, listingYear);
 
 
         try {
             List<XmlParser.Entry> entryList = xmlParser.parseFile(selectedTabXmlFilePath, context);
 
             for (XmlParser.Entry entry: entryList) {
-                modelNames.add(entry.model);
+                listingModel.add(entry.model);
+                listingPrice.add(entry.price);
+                listingYear.add(entry.year);
+
             }
 
         } catch (XmlPullParserException e) {

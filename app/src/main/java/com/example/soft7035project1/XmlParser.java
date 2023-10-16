@@ -49,7 +49,7 @@ public class XmlParser {
 
         Log.d("myDebug", "preparser.require");
 
-        parser.require(XmlPullParser.START_TAG, ns, "feed");
+        parser.require(XmlPullParser.START_TAG, ns, "entries");
         Log.d("myDebug", "postparser.require");
 
 
@@ -60,9 +60,10 @@ public class XmlParser {
 
             String name = parser.getName();
             if (name.equals("entry")) {
-                Log.d("myDebug", "entryfound");
+                Log.d("myDebug", "Entry Found");
                 entries.add(readEntry(parser));
             } else {
+                Log.d("myDebug", "Entry Not Found");
                 skip(parser);
             }
         }
@@ -84,7 +85,7 @@ public class XmlParser {
     // Parses the contents of an entry. If it encounters a model, year, or price tag, hands them off
 // to their respective "read" methods for processing. Otherwise, skips the tag.
     private Entry readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
-        parser.require(XmlPullParser.START_TAG, ns, "entry");
+//        parser.require(XmlPullParser.START_TAG, ns, "entry");
         String model = null;
         String year = null;
         String price = null;
@@ -94,14 +95,17 @@ public class XmlParser {
             }
             String name = parser.getName();
             switch (name) {
-                case "name":
+                case "model":
                     model = readModel(parser);
+                    Log.d("MyDebug", model.toString());
                     break;
                 case "year":
                     year = readYear(parser);
+                    Log.d("MyDebug", year.toString());
                     break;
                 case "price":
                     price = readPrice(parser);
+                    Log.d("MyDebug", price.toString());
                     break;
                 default:
                     skip(parser);
@@ -121,18 +125,11 @@ public class XmlParser {
 
     // Processes price tags in the feed.
     private String readPrice(XmlPullParser parser) throws IOException, XmlPullParserException {
-        String price = "";
         parser.require(XmlPullParser.START_TAG, ns, "price");
-        String tag = parser.getName();
-        String relType = parser.getAttributeValue(null, "rel");
-        if (tag.equals("price")) {
-            if (relType.equals("alternate")){
-                price = parser.getAttributeValue(null, "href");
-                parser.nextTag();
-            }
-        }
+        String price = readText(parser);
         parser.require(XmlPullParser.END_TAG, ns, "price");
         return price;
+
     }
 
     // Processes year tags in the feed.

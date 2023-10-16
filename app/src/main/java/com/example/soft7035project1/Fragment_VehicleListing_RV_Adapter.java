@@ -12,13 +12,17 @@ import java.util.List;
 
 public class Fragment_VehicleListing_RV_Adapter extends RecyclerView.Adapter<Fragment_VehicleListing_RV_Adapter.ViewHolder> {
 
-    private List<String> mData;
+    private List<String> modelData;
+    private List<String> priceData;
+    private List<String> yearData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    Fragment_VehicleListing_RV_Adapter(Fragment_VehicleListing context, List<String> data) {
+    Fragment_VehicleListing_RV_Adapter(Fragment_VehicleListing context, List<String> modelData, List<String> priceData, List<String> yearData) {
         this.mInflater = LayoutInflater.from(context.getActivity());
-        this.mData = data;
+        this.modelData = modelData;
+        this.priceData = priceData;
+        this.yearData = yearData;
     }
     @NonNull
     @Override
@@ -29,21 +33,27 @@ public class Fragment_VehicleListing_RV_Adapter extends RecyclerView.Adapter<Fra
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String animal = mData.get(position);
-        holder.RvRowTextView.setText(animal);
+
+        holder.RvRowHeaderTextView.setText(modelData.get(position));
+        holder.RvRowYearTextView.setText(priceData.get(position));
+        holder.RvRowPriceTextView.setText(yearData.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return modelData.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView RvRowTextView;
+        TextView RvRowHeaderTextView;
+        TextView RvRowYearTextView;
+        TextView RvRowPriceTextView;
 
         ViewHolder(View itemview) {
             super(itemview);
-            RvRowTextView = itemview.findViewById(R.id.RvRowHeaderTextView);
+            RvRowHeaderTextView = itemview.findViewById(R.id.RvRowHeaderTextView);
+            RvRowYearTextView = itemview.findViewById(R.id.RvRowYearTextView);
+            RvRowPriceTextView = itemview.findViewById(R.id.RvRowPriceTextView);
             itemview.setOnClickListener(this);
         }
 
@@ -56,7 +66,7 @@ public class Fragment_VehicleListing_RV_Adapter extends RecyclerView.Adapter<Fra
 
     }
     String getItem(int id) {
-        return mData.get(id);
+        return modelData.get(id);
     }
 
     void setClickListener(ItemClickListener itemClickListener) {
