@@ -1,19 +1,17 @@
 package com.example.soft7035project1;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.util.Log;
 import android.util.Xml;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-import android.content.res.AssetManager;
 
 // A class to parse XML data for use in creating the RecyclerView feed
 //
@@ -22,11 +20,14 @@ import android.content.res.AssetManager;
 public class XmlParser {
     private static final String ns = null;
 
+    String xmlTitle;
+    String xmlImgPrefix;
+
+
     public List<Entry> parseFile(String filePath, Context context) throws XmlPullParserException, IOException {
 
 //        InputStream in = new FileInputStream(filePath);
 
-        AssetManager assetManager = context.getAssets();
         InputStream in = context.getAssets().open(filePath);
 
         Log.d("mydebug", in.toString());
@@ -52,6 +53,8 @@ public class XmlParser {
         parser.require(XmlPullParser.START_TAG, ns, "entries");
         Log.d("myDebug", "postparser.require");
 
+        this.xmlTitle = parser.getAttributeValue(0);
+        this.xmlImgPrefix = parser.getAttributeValue(1);
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -60,7 +63,11 @@ public class XmlParser {
 
             String name = parser.getName();
             if (name.equals("entry")) {
-                Log.d("myDebug", "Entry Found");
+
+                int entryId = Integer.parseInt(parser.getAttributeValue(0));
+                Log.d("myDebug", "Entry Found, ID:" +entryId);
+
+
                 entries.add(readEntry(parser));
             } else {
                 Log.d("myDebug", "Entry Not Found");
@@ -97,15 +104,15 @@ public class XmlParser {
             switch (name) {
                 case "model":
                     model = readModel(parser);
-                    Log.d("MyDebug", model.toString());
+                    Log.d("MyDebug", model);
                     break;
                 case "year":
                     year = readYear(parser);
-                    Log.d("MyDebug", year.toString());
+                    Log.d("MyDebug", year);
                     break;
                 case "price":
                     price = readPrice(parser);
-                    Log.d("MyDebug", price.toString());
+                    Log.d("MyDebug", price);
                     break;
                 default:
                     skip(parser);
@@ -168,5 +175,12 @@ public class XmlParser {
         }
     }
 
+    public String getXmlImgPrefix() {
+        return xmlImgPrefix;
+    }
+
+    public String getXmlTitle() {
+        return xmlTitle;
+    }
 }
 

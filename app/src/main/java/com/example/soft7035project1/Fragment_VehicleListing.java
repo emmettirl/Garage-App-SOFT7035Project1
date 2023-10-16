@@ -42,8 +42,6 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
         ArrayList<String> listingPrice=new ArrayList<>();
         ArrayList<String> listingYear=new ArrayList<>();
 
-        this.adapter = new Fragment_VehicleListing_RV_Adapter(this, listingModel, listingPrice, listingYear);
-
 
         try {
             List<XmlParser.Entry> entryList = xmlParser.parseFile(selectedTabXmlFilePath, context);
@@ -55,6 +53,9 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
 
             }
 
+            this.adapter = new Fragment_VehicleListing_RV_Adapter(this, listingModel, listingPrice, listingYear, xmlParser.getXmlTitle(), xmlParser.getXmlImgPrefix());
+
+
         } catch (XmlPullParserException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -62,16 +63,9 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
         }
 
 
-//        carModels.add("Horse");
-//        carModels.add("Sheep");
-//        carModels.add("Goat");
-//        carModels.add("Rabbit");
-
-
         assert getArguments() != null;
 
         TextView fragmentHeader = view.findViewById(R.id.fragmentHeading);
-        assert context != null;
         String HeaderString = (
                 getResources().getString(
                         (
