@@ -44,7 +44,7 @@ public class Activity_Main extends AppCompatActivity {
     }
 
     private void startIntent(int selectedTab){
-        Intent intentStart = new Intent(Activity_Main.this, Activity_VehicleListing.class);
+        Intent intentStart = new Intent(Activity_Main.this, Activity_Listings.class);
         intentStart.putExtra("selectedTab", selectedTab);
         startActivity(intentStart);
     }

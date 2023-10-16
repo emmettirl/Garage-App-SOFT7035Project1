@@ -20,15 +20,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Fragment_VehicleListing extends Fragment implements Fragment_VehicleListing_RV_Adapter.ItemClickListener {
+public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Adapter.ItemClickListener {
 
-    Fragment_VehicleListing_RV_Adapter adapter;
+    Fragment_Listing_RV_Adapter adapter;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_vehicle_listing, container, false);
+        View view = inflater.inflate(R.layout.fragment_listing, container, false);
         Context context = getActivity();
 
         int selectedTab = getArguments().getInt("selectedTab");
@@ -53,7 +53,7 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
 
             }
 
-            this.adapter = new Fragment_VehicleListing_RV_Adapter(this, listingModel, listingPrice, listingYear, xmlParser.getXmlTitle(), xmlParser.getXmlImgPrefix());
+            this.adapter = new Fragment_Listing_RV_Adapter(this, listingModel, listingPrice, listingYear, xmlParser.getXmlTitle(), xmlParser.getXmlImgPrefix());
 
 
         } catch (XmlPullParserException e) {
@@ -95,8 +95,8 @@ public class Fragment_VehicleListing extends Fragment implements Fragment_Vehicl
         Toast.makeText(getActivity(), "You clicked "+ adapter.getItem(position) +" on row number " + position, Toast.LENGTH_SHORT).show();
     }
 
-    public static Fragment_VehicleListing newInstance(int selectedTab) {
-        Fragment_VehicleListing fragment = new Fragment_VehicleListing();
+    public static Fragment_Listing newInstance(int selectedTab) {
+        Fragment_Listing fragment = new Fragment_Listing();
         Bundle args = new Bundle();
         args.putInt("selectedTab", selectedTab);
         fragment.setArguments(args);

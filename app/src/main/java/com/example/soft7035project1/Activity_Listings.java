@@ -12,7 +12,7 @@ import android.view.View;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
-public class Activity_VehicleListing extends AppCompatActivity {
+public class Activity_Listings extends AppCompatActivity {
 
     TabLayout tab;
     FloatingActionButton fabBack;
@@ -20,13 +20,13 @@ public class Activity_VehicleListing extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vehicle_listing);
+        setContentView(R.layout.activity_listing);
 
         this.tab=findViewById(R.id.tabLayout);
         tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                replaceFragment(Fragment_VehicleListing.newInstance(tab.getPosition()));
+                replaceFragment(Fragment_Listing.newInstance(tab.getPosition()));
             }
 
             @Override
@@ -36,7 +36,7 @@ public class Activity_VehicleListing extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                replaceFragment(Fragment_VehicleListing.newInstance(tab.getPosition()));
+                replaceFragment(Fragment_Listing.newInstance(tab.getPosition()));
             }
         });
 
@@ -44,7 +44,7 @@ public class Activity_VehicleListing extends AppCompatActivity {
         fabBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentBack = new Intent(Activity_VehicleListing.this, Activity_Main.class);
+                Intent intentBack = new Intent(Activity_Listings.this, Activity_Main.class);
                 startActivity(intentBack);
             }
         });

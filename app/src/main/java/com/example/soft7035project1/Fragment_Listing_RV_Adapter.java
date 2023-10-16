@@ -15,9 +15,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class Fragment_VehicleListing_RV_Adapter extends RecyclerView.Adapter<Fragment_VehicleListing_RV_Adapter.ViewHolder> {
+public class Fragment_Listing_RV_Adapter extends RecyclerView.Adapter<Fragment_Listing_RV_Adapter.ViewHolder> {
 
-    Fragment_VehicleListing context;
+    Fragment_Listing context;
 
     private List<String> modelData;
     private List<String> priceData;
@@ -27,8 +27,8 @@ public class Fragment_VehicleListing_RV_Adapter extends RecyclerView.Adapter<Fra
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    Fragment_VehicleListing_RV_Adapter(
-            Fragment_VehicleListing context,
+    Fragment_Listing_RV_Adapter(
+            Fragment_Listing context,
             List<String> modelData,
             List<String> priceData,
             List<String> yearData,
