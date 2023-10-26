@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -57,17 +60,14 @@ public class Fragment_Listing_RV_Adapter extends RecyclerView.Adapter<Fragment_L
         String price = "€ " + priceData.get(position);
         holder.RvRowYearTextView.setText(price);
         holder.RvRowPriceTextView.setText(yearData.get(position));
+        String imageuri = "images/" + xmlImagePrefix+position+".jpeg";
+        Log.d("TAG", imageuri);
 
-        try {
-//            Log.d("MyDebug", "onBindViewHolder: " + xmlImagePrefix);
-            InputStream ims = context.getContext().getAssets().open("images/" + xmlImagePrefix+position+".jpeg");
-            Drawable d = Drawable.createFromStream(ims, null);
-            holder.RvRowListingImageView.setImageDrawable(d);
-            ims.close();
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+            Glide.with(this.context.getActivity())
+                    .load("file:///android_asset/" + imageuri)
+                    .apply(new RequestOptions().override(600,200))
+                    .into(holder.RvRowListingImageView);
 
     }
 
