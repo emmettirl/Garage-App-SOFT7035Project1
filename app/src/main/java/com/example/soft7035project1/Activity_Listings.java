@@ -54,8 +54,6 @@ public class Activity_Listings extends AppCompatActivity {
         int selectedTab = getIntent().getIntExtra("selectedTab",0);
         tab.getTabAt(selectedTab).select();
 
-//        Fragment fragment = Fragment_VehicleListing.newInstance(selectedTab);
-//        replaceFragment(fragment);
 
     }
 

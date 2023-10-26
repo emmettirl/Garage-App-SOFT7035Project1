@@ -26,12 +26,8 @@ public class XmlParser {
 
     public List<Entry> parseFile(String filePath, Context context) throws XmlPullParserException, IOException {
 
-//        InputStream in = new FileInputStream(filePath);
 
         InputStream in = context.getAssets().open(filePath);
-
-//        Log.d("mydebug", in.toString());
-
 
         try {
             XmlPullParser parser = Xml.newPullParser();
@@ -47,12 +43,7 @@ public class XmlParser {
     private List readFeed(XmlPullParser parser) throws XmlPullParserException, IOException {
         List entries = new ArrayList<>();
 
-
-//        Log.d("myDebug", "preparser.require");
-
         parser.require(XmlPullParser.START_TAG, ns, "entries");
-//        Log.d("myDebug", "postparser.require");
-
         this.xmlTitle = parser.getAttributeValue(0);
         this.xmlImgPrefix = parser.getAttributeValue(1);
 

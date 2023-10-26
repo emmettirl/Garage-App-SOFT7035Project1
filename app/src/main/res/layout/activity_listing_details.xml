@@ -1,51 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--ToDo: either change fabs into a tab view for coherence, or have a single fab open three others-->
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_Listing_Details">
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fabWebsiteCardView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:clickable="true"-->
-<!--        android:contentDescription="To Website Button"-->
-<!--        android:src="?android:attr/listChoiceIndicatorSingle"-->
-<!--        app:backgroundTint="@color/primary"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@id/fabHomeCardView"-->
-<!--        app:layout_constraintStart_toStartOf="parent"/>-->
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fabHomeCardView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_weight="1"-->
-<!--        android:clickable="true"-->
-<!--        android:contentDescription="Home Button"-->
-<!--        android:src="?android:attr/listChoiceIndicatorSingle"-->
-<!--        app:backgroundTint="@color/primary"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@id/fabWebsiteCardView"-->
-<!--        app:layout_constraintEnd_toStartOf="@id/fabBackCardView"/>-->
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fabBackCardView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_weight="1"-->
-<!--        android:clickable="true"-->
-<!--        android:contentDescription="Back Button"-->
-<!--        android:src="?attr/homeAsUpIndicator"-->
-<!--        app:backgroundTint="@color/primary"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@id/fabHomeCardView"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
 
     <View
         android:id="@+id/rectangle_at_the_top2"

@@ -127,37 +127,6 @@ public class Activity_Listing_Details extends AppCompatActivity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
-//        this.fabBack = findViewById(R.id.fabBackCardView);
-//
-//        fabBack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Activity_Listing_Details.this, Activity_Listings.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//        this.fabHome = findViewById(R.id.fabHomeCardView);
-//        fabHome.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View v) {
-//            Intent intent = new Intent(Activity_Listing_Details.this, Activity_Main.class);
-//            startActivity(intent);
-//        }
-//    });
-//
-//        this.fabWebsite = findViewById(R.id.fabWebsiteCardView);
-//        fabWebsite.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                showWebPage();
-//            }
-//
-//        });
-
     }
 
 
