@@ -22,18 +22,22 @@
             android:layout_width="match_parent"
             android:layout_height="129dp"
             android:background="@color/primary"
-            app:srcCompat="@drawable/logo_1" />
+            app:srcCompat="@drawable/logo_1"
+            android:contentDescription="Logo" />
 
         <TextView
             android:id="@+id/textViewTitle1"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:text="Welcome to the Garage App"
-            android:textColor="@color/primary" />
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="20sp" />
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
 
             <TextView
                 android:id="@+id/textView2"
@@ -46,19 +50,25 @@
                 android:id="@+id/radioCar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Car" />
+                android:text="Car"
+                android:textColor="@color/white"
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioBike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bike" />
+                android:text="Bike"
+                android:textColor="@color/white"
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioOther"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="Other"
+                android:textColor="@color/white"
+                android:theme="@style/RadioButtonStyle" />
         </RadioGroup>
 
         <androidx.constraintlayout.widget.ConstraintLayout

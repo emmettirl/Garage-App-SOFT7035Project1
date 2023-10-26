@@ -3,7 +3,7 @@ package com.example.soft7035project1;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +25,14 @@ public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Ad
     Fragment_Listing_RV_Adapter adapter;
     Context context;
 
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        TransitionInflater inflater = TransitionInflater.from(requireContext());
+        setEnterTransition(inflater.inflateTransition(R.transition.slide_right));
+   }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,9 +65,7 @@ public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Ad
             this.adapter = new Fragment_Listing_RV_Adapter(this, listingModel, listingPrice, listingYear, xmlParser.getXmlTitle(), xmlParser.getXmlImgPrefix());
 
 
-        } catch (XmlPullParserException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (XmlPullParserException | IOException e) {
             throw new RuntimeException(e);
         }
 
