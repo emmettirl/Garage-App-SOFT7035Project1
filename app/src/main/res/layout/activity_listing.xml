@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--ToDo: add animations between tab views-->
+<!--ToDo: animate opening card layout -->
+<!--ToDo: sounds? -->
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -57,11 +63,14 @@
         android:id="@+id/fabBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:clickable="true"
+        android:contentDescription="Go back to the homepage"
+        app:backgroundTint="@color/primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_at_the_top"
-        app:srcCompat="?attr/homeAsUpIndicator"
-        android:contentDescription="Go back to the homepage" />
+        app:srcCompat="?attr/homeAsUpIndicator" />
 
     <FrameLayout
         android:id="@+id/fragmentFrame"

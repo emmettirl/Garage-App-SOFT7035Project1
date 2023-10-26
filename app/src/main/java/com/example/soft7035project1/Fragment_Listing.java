@@ -34,7 +34,7 @@ public class Fragment_Listing extends Fragment implements Fragment_Listing_RV_Ad
 
         int selectedTab = getArguments().getInt("selectedTab");
         String selectedTabXmlFilePath = "tabs/" + selectedTab + ".xml";
-        Log.d("myDebug", selectedTabXmlFilePath);
+//        Log.d("myDebug", selectedTabXmlFilePath);
 
         XmlParser xmlParser = new XmlParser();
 

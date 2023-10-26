@@ -59,7 +59,7 @@ public class Fragment_Listing_RV_Adapter extends RecyclerView.Adapter<Fragment_L
         holder.RvRowPriceTextView.setText(yearData.get(position));
 
         try {
-            Log.d("MyDebug", "onBindViewHolder: " + xmlImagePrefix);
+//            Log.d("MyDebug", "onBindViewHolder: " + xmlImagePrefix);
             InputStream ims = context.getContext().getAssets().open("images/" + xmlImagePrefix+position+".jpeg");
             Drawable d = Drawable.createFromStream(ims, null);
             holder.RvRowListingImageView.setImageDrawable(d);

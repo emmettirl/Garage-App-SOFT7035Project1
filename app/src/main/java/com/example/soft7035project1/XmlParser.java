@@ -30,7 +30,7 @@ public class XmlParser {
 
         InputStream in = context.getAssets().open(filePath);
 
-        Log.d("mydebug", in.toString());
+//        Log.d("mydebug", in.toString());
 
 
         try {
@@ -48,10 +48,10 @@ public class XmlParser {
         List entries = new ArrayList<>();
 
 
-        Log.d("myDebug", "preparser.require");
+//        Log.d("myDebug", "preparser.require");
 
         parser.require(XmlPullParser.START_TAG, ns, "entries");
-        Log.d("myDebug", "postparser.require");
+//        Log.d("myDebug", "postparser.require");
 
         this.xmlTitle = parser.getAttributeValue(0);
         this.xmlImgPrefix = parser.getAttributeValue(1);
@@ -65,12 +65,12 @@ public class XmlParser {
             if (name.equals("entry")) {
 
                 int entryId = Integer.parseInt(parser.getAttributeValue(0));
-                Log.d("myDebug", "Entry Found, ID:" +entryId);
+//                Log.d("myDebug", "Entry Found, ID:" +entryId);
 
 
                 entries.add(readEntry(parser));
             } else {
-                Log.d("myDebug", "Entry Not Found");
+//                Log.d("myDebug", "Entry Not Found");
                 skip(parser);
             }
         }
@@ -104,15 +104,15 @@ public class XmlParser {
             switch (name) {
                 case "model":
                     model = readModel(parser);
-                    Log.d("MyDebug", model);
+//                    Log.d("MyDebug", model);
                     break;
                 case "year":
                     year = readYear(parser);
-                    Log.d("MyDebug", year);
+//                    Log.d("MyDebug", year);
                     break;
                 case "price":
                     price = readPrice(parser);
-                    Log.d("MyDebug", price);
+//                    Log.d("MyDebug", price);
                     break;
                 default:
                     skip(parser);
